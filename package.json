@@ -1,0 +1,40 @@
+{
+  "name": "sushinote-mysql",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "build:js": "browserify -t vueify ${npm_package_config_src_js} > ${npm_package_config_dist_js}",
+    "pretest": "jshint .",
+    "watch:js": "watchify -t vueify ${npm_package_config_src_js} -o ${npm_package_config_dist_js} -dv",
+    "dev": "parallelshell 'npm run watch:js' 'node-dev .'"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-connector-mysql": "^2.2.1",
+    "loopback-datasource-juggler": "^2.39.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "marked": "^0.3.5",
+    "node-dev": "^3.1.0",
+    "parallelshell": "^2.0.0",
+    "vue": "^1.0.16",
+    "vue-resource": "^0.7.0",
+    "vueify": "^6.0.0",
+    "watchify": "^3.7.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "sushinote-mysql",
+  "config": {
+    "src_js": "client/main.js",
+    "dist_js": "client/bundle.js"
+  }
+}

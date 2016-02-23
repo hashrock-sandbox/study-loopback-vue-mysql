@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlDs": {
+    "database": "test",
+    "password": "test",
+    "name": "mysqlDs",
+    "connector": "mysql",
+    "user": "test"
+  }
+}
